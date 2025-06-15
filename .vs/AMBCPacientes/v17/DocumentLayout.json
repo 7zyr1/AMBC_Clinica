@@ -1,0 +1,170 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F4B257DE-D331-4C22-827A-A5F178A6866B}|AMBCPacientes\\AMBCPacientes.csproj|c:\\users\\valentino\\dev\\source\\repos\\ambcpacientes\\ambcpacientes\\frmpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F4B257DE-D331-4C22-827A-A5F178A6866B}|AMBCPacientes\\AMBCPacientes.csproj|solutionrelative:ambcpacientes\\frmpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4B257DE-D331-4C22-827A-A5F178A6866B}|AMBCPacientes\\AMBCPacientes.csproj|C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\ambcpacientes\\frmcallespacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4B257DE-D331-4C22-827A-A5F178A6866B}|AMBCPacientes\\AMBCPacientes.csproj|solutionrelative:ambcpacientes\\frmcallespacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4B257DE-D331-4C22-827A-A5F178A6866B}|AMBCPacientes\\AMBCPacientes.csproj|C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\ambcpacientes\\frmcallespacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F4B257DE-D331-4C22-827A-A5F178A6866B}|AMBCPacientes\\AMBCPacientes.csproj|solutionrelative:ambcpacientes\\frmcallespacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4B257DE-D331-4C22-827A-A5F178A6866B}|AMBCPacientes\\AMBCPacientes.csproj|C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\ambcpacientes\\frmdetallepaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4B257DE-D331-4C22-827A-A5F178A6866B}|AMBCPacientes\\AMBCPacientes.csproj|solutionrelative:ambcpacientes\\frmdetallepaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4B257DE-D331-4C22-827A-A5F178A6866B}|AMBCPacientes\\AMBCPacientes.csproj|C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\ambcpacientes\\frmdetallecalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F4B257DE-D331-4C22-827A-A5F178A6866B}|AMBCPacientes\\AMBCPacientes.csproj|solutionrelative:ambcpacientes\\frmdetallecalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4B257DE-D331-4C22-827A-A5F178A6866B}|AMBCPacientes\\AMBCPacientes.csproj|C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\ambcpacientes\\frmpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4B257DE-D331-4C22-827A-A5F178A6866B}|AMBCPacientes\\AMBCPacientes.csproj|solutionrelative:ambcpacientes\\frmpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4B257DE-D331-4C22-827A-A5F178A6866B}|AMBCPacientes\\AMBCPacientes.csproj|C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\ambcpacientes\\frmdetallecalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4B257DE-D331-4C22-827A-A5F178A6866B}|AMBCPacientes\\AMBCPacientes.csproj|solutionrelative:ambcpacientes\\frmdetallecalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4B257DE-D331-4C22-827A-A5F178A6866B}|AMBCPacientes\\AMBCPacientes.csproj|C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\ambcpacientes\\frmdetallepaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F4B257DE-D331-4C22-827A-A5F178A6866B}|AMBCPacientes\\AMBCPacientes.csproj|solutionrelative:ambcpacientes\\frmdetallepaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4B257DE-D331-4C22-827A-A5F178A6866B}|AMBCPacientes\\AMBCPacientes.csproj|C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\ambcpacientes\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4B257DE-D331-4C22-827A-A5F178A6866B}|AMBCPacientes\\AMBCPacientes.csproj|solutionrelative:ambcpacientes\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmCallesPacientes.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\AMBCPacientes\\frmCallesPacientes.cs",
+              "RelativeDocumentMoniker": "AMBCPacientes\\frmCallesPacientes.cs",
+              "ToolTip": "C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\AMBCPacientes\\frmCallesPacientes.cs [Dise\u00F1o]",
+              "RelativeToolTip": "AMBCPacientes\\frmCallesPacientes.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T19:59:26.883Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmDetallePaciente.cs",
+              "DocumentMoniker": "C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\AMBCPacientes\\frmDetallePaciente.cs",
+              "RelativeDocumentMoniker": "AMBCPacientes\\frmDetallePaciente.cs",
+              "ToolTip": "C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\AMBCPacientes\\frmDetallePaciente.cs",
+              "RelativeToolTip": "AMBCPacientes\\frmDetallePaciente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T19:58:47.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmPacientes.cs",
+              "DocumentMoniker": "C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\AMBCPacientes\\frmPacientes.cs",
+              "RelativeDocumentMoniker": "AMBCPacientes\\frmPacientes.cs",
+              "ToolTip": "C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\AMBCPacientes\\frmPacientes.cs",
+              "RelativeToolTip": "AMBCPacientes\\frmPacientes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T19:58:37.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmPacientes.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\AMBCPacientes\\frmPacientes.cs",
+              "RelativeDocumentMoniker": "AMBCPacientes\\frmPacientes.cs",
+              "ToolTip": "C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\AMBCPacientes\\frmPacientes.cs [Dise\u00F1o]",
+              "RelativeToolTip": "AMBCPacientes\\frmPacientes.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T19:58:34.43Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmCallesPacientes.cs",
+              "DocumentMoniker": "C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\AMBCPacientes\\frmCallesPacientes.cs",
+              "RelativeDocumentMoniker": "AMBCPacientes\\frmCallesPacientes.cs",
+              "ToolTip": "C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\AMBCPacientes\\frmCallesPacientes.cs",
+              "RelativeToolTip": "AMBCPacientes\\frmCallesPacientes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T19:58:01.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmDetalleCalle.cs",
+              "DocumentMoniker": "C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\AMBCPacientes\\frmDetalleCalle.cs",
+              "RelativeDocumentMoniker": "AMBCPacientes\\frmDetalleCalle.cs",
+              "ToolTip": "C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\AMBCPacientes\\frmDetalleCalle.cs",
+              "RelativeToolTip": "AMBCPacientes\\frmDetalleCalle.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T19:57:54.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmDetalleCalle.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\AMBCPacientes\\frmDetalleCalle.cs",
+              "RelativeDocumentMoniker": "AMBCPacientes\\frmDetalleCalle.cs",
+              "ToolTip": "C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\AMBCPacientes\\frmDetalleCalle.cs [Dise\u00F1o]",
+              "RelativeToolTip": "AMBCPacientes\\frmDetalleCalle.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T19:57:49.794Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmDetallePaciente.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\AMBCPacientes\\frmDetallePaciente.cs",
+              "RelativeDocumentMoniker": "AMBCPacientes\\frmDetallePaciente.cs",
+              "ToolTip": "C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\AMBCPacientes\\frmDetallePaciente.cs [Dise\u00F1o]",
+              "RelativeToolTip": "AMBCPacientes\\frmDetallePaciente.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T19:57:37.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\AMBCPacientes\\Program.cs",
+              "RelativeDocumentMoniker": "AMBCPacientes\\Program.cs",
+              "ToolTip": "C:\\Users\\Valentino\\dev\\source\\repos\\AMBCPacientes\\AMBCPacientes\\Program.cs",
+              "RelativeToolTip": "AMBCPacientes\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T19:53:05.291Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -30,12 +30,10 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblApellido = new System.Windows.Forms.Label();
-            this.lblDni = new System.Windows.Forms.Label();
-            this.lblCalle = new System.Windows.Forms.Label();
-            this.lblEdad = new System.Windows.Forms.Label();
             this.lblNumeracion = new System.Windows.Forms.Label();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblDni = new System.Windows.Forms.Label();
             this.Telefono = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -44,10 +42,12 @@
             this.txtEdad = new System.Windows.Forms.TextBox();
             this.txtNumeracion = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.lblEdad = new System.Windows.Forms.Label();
+            this.lblCalle = new System.Windows.Forms.Label();
+            this.cboCalle = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.cboCalle = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -97,15 +97,15 @@
             this.lblCodigo.TabIndex = 1;
             this.lblCodigo.Text = "Codigo";
             // 
-            // lblNombre
+            // lblNumeracion
             // 
-            this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(56, 52);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(56, 16);
-            this.lblNombre.TabIndex = 2;
-            this.lblNombre.Text = "Nombre";
+            this.lblNumeracion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblNumeracion.AutoSize = true;
+            this.lblNumeracion.Location = new System.Drawing.Point(44, 252);
+            this.lblNumeracion.Name = "lblNumeracion";
+            this.lblNumeracion.Size = new System.Drawing.Size(80, 16);
+            this.lblNumeracion.TabIndex = 7;
+            this.lblNumeracion.Text = "Numeracion";
             // 
             // lblApellido
             // 
@@ -117,6 +117,16 @@
             this.lblApellido.TabIndex = 3;
             this.lblApellido.Text = "Apellido";
             // 
+            // lblNombre
+            // 
+            this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(56, 52);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(56, 16);
+            this.lblNombre.TabIndex = 2;
+            this.lblNombre.Text = "Nombre";
+            // 
             // lblDni
             // 
             this.lblDni.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -126,36 +136,6 @@
             this.lblDni.Size = new System.Drawing.Size(30, 16);
             this.lblDni.TabIndex = 4;
             this.lblDni.Text = "DNI";
-            // 
-            // lblCalle
-            // 
-            this.lblCalle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCalle.AutoSize = true;
-            this.lblCalle.Location = new System.Drawing.Point(65, 212);
-            this.lblCalle.Name = "lblCalle";
-            this.lblCalle.Size = new System.Drawing.Size(38, 16);
-            this.lblCalle.TabIndex = 5;
-            this.lblCalle.Text = "Calle";
-            // 
-            // lblEdad
-            // 
-            this.lblEdad.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblEdad.AutoSize = true;
-            this.lblEdad.Location = new System.Drawing.Point(64, 172);
-            this.lblEdad.Name = "lblEdad";
-            this.lblEdad.Size = new System.Drawing.Size(40, 16);
-            this.lblEdad.TabIndex = 6;
-            this.lblEdad.Text = "Edad";
-            // 
-            // lblNumeracion
-            // 
-            this.lblNumeracion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblNumeracion.AutoSize = true;
-            this.lblNumeracion.Location = new System.Drawing.Point(44, 252);
-            this.lblNumeracion.Name = "lblNumeracion";
-            this.lblNumeracion.Size = new System.Drawing.Size(80, 16);
-            this.lblNumeracion.TabIndex = 7;
-            this.lblNumeracion.Text = "Numeracion";
             // 
             // Telefono
             // 
@@ -223,6 +203,35 @@
             this.txtTelefono.Size = new System.Drawing.Size(100, 22);
             this.txtTelefono.TabIndex = 16;
             // 
+            // lblEdad
+            // 
+            this.lblEdad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblEdad.AutoSize = true;
+            this.lblEdad.Location = new System.Drawing.Point(64, 172);
+            this.lblEdad.Name = "lblEdad";
+            this.lblEdad.Size = new System.Drawing.Size(40, 16);
+            this.lblEdad.TabIndex = 6;
+            this.lblEdad.Text = "Edad";
+            // 
+            // lblCalle
+            // 
+            this.lblCalle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCalle.AutoSize = true;
+            this.lblCalle.Location = new System.Drawing.Point(65, 212);
+            this.lblCalle.Name = "lblCalle";
+            this.lblCalle.Size = new System.Drawing.Size(38, 16);
+            this.lblCalle.TabIndex = 5;
+            this.lblCalle.Text = "Calle";
+            // 
+            // cboCalle
+            // 
+            this.cboCalle.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cboCalle.FormattingEnabled = true;
+            this.cboCalle.Location = new System.Drawing.Point(172, 208);
+            this.cboCalle.Name = "cboCalle";
+            this.cboCalle.Size = new System.Drawing.Size(145, 24);
+            this.cboCalle.TabIndex = 17;
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -256,15 +265,7 @@
             this.btnCancelar.TabIndex = 1;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // cboCalle
-            // 
-            this.cboCalle.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cboCalle.FormattingEnabled = true;
-            this.cboCalle.Location = new System.Drawing.Point(172, 208);
-            this.cboCalle.Name = "cboCalle";
-            this.cboCalle.Size = new System.Drawing.Size(145, 24);
-            this.cboCalle.TabIndex = 17;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmDetallePaciente
             // 
@@ -275,6 +276,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmDetallePaciente";
             this.Text = "frmDetallePaciente";
+            this.Load += new System.EventHandler(this.frmDetallePaciente_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);

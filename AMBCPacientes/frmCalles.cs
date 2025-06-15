@@ -16,7 +16,7 @@ namespace AMBCPacientes
         {
             InitializeComponent();
         }
-        public void TraerCalles(string consulta)
+        public List<Calle> TraerCalles(string consulta)
         {
             AccesoDatos accesoDatos = new AccesoDatos();
             List<Calle> calles = new List<Calle>();
@@ -30,6 +30,7 @@ namespace AMBCPacientes
             }
             dgvCalles.DataSource = calles;
             accesoDatos.Desconectar();
+            return calles;
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -87,6 +88,10 @@ namespace AMBCPacientes
                         btnConsultar.PerformClick();
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Debes seleccionar una calle para Borrar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (System.Data.SqlClient.SqlException ex)
             {
@@ -113,6 +118,10 @@ namespace AMBCPacientes
                 frmDetalleCalle FrmDetalleCalle = new frmDetalleCalle(calleSeleccionada);
                 FrmDetalleCalle.ShowDialog();
                 btnConsultar.PerformClick();
+            }
+            else
+            {
+                MessageBox.Show("Debes seleccionar una calle para Editar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

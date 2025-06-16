@@ -82,15 +82,18 @@ namespace AMBCPacientes
                     if (result == DialogResult.Yes)
                     {
                         AccesoDatos accesoDatos = new AccesoDatos();
-                        string query = $"delete from calles where id_calle = {numero}";
-                        accesoDatos.EjecutarConsulta(query);
-                        MessageBox.Show("Calle eliminada correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        string query = $"delete from calles where id_calle = @id_calle";
+                        List<Parametro> parametros = new List<Parametro>();
+                        Parametro id = new Parametro("@id_calle", numero);
+                        parametros.Add(id);
+                        accesoDatos.ActualizarBD(query, parametros);
+                        MessageBox.Show("Calle eliminada correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         btnConsultar.PerformClick();
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Debes seleccionar una calle para Borrar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                    {
+                        MessageBox.Show("Debes seleccionar una calle para Borrar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             catch (System.Data.SqlClient.SqlException ex)

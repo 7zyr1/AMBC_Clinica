@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AMBCPacientes
 {
-    internal class Paciente
+    public class Paciente
     {
         public int id {  get; set; }
         public string nombre { get; set; }
@@ -15,8 +15,9 @@ namespace AMBCPacientes
         public int edad {  get; set; }
         public Calle calle { get; set; }
         public int numeracion {  get; set; }
-        public int telefono { get; set; }
-        public Paciente(int id, string nombre, string apellido, int dni, int edad, Calle calle, int numeracion, int telefono)
+        public string telefono { get; set; }
+        //public string nombreCalle => calle?.nombre;
+        public Paciente(int id, string nombre, string apellido, int dni, int edad, Calle calle, int numeracion, string telefono)
         {
             this.id = id;
             this.nombre = nombre;

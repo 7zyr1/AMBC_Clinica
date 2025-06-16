@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dgvPacientes = new System.Windows.Forms.DataGridView();
+            this.txtPacientes = new System.Windows.Forms.TextBox();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.lblPacientes = new System.Windows.Forms.Label();
             this.lblFiltro = new System.Windows.Forms.Label();
@@ -38,26 +38,26 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvPacientes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 61);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 338);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPacientes.Location = new System.Drawing.Point(12, 61);
+            this.dgvPacientes.Name = "dgvPacientes";
+            this.dgvPacientes.RowHeadersWidth = 51;
+            this.dgvPacientes.RowTemplate.Height = 24;
+            this.dgvPacientes.Size = new System.Drawing.Size(776, 338);
+            this.dgvPacientes.TabIndex = 0;
             // 
-            // textBox1
+            // txtPacientes
             // 
-            this.textBox1.Location = new System.Drawing.Point(170, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(460, 22);
-            this.textBox1.TabIndex = 1;
+            this.txtPacientes.Location = new System.Drawing.Point(170, 24);
+            this.txtPacientes.Name = "txtPacientes";
+            this.txtPacientes.Size = new System.Drawing.Size(460, 22);
+            this.txtPacientes.TabIndex = 1;
             // 
             // btnConsultar
             // 
@@ -67,6 +67,7 @@
             this.btnConsultar.TabIndex = 2;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // lblPacientes
             // 
@@ -125,6 +126,7 @@
             this.btnEditar.TabIndex = 1;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnCancelar
             // 
@@ -135,6 +137,7 @@
             this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Borrar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnSalir
             // 
@@ -156,15 +159,11 @@
             this.Controls.Add(this.lblFiltro);
             this.Controls.Add(this.lblPacientes);
             this.Controls.Add(this.btnConsultar);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.Controls.Add(this.txtPacientes);
+            this.Controls.Add(this.dgvPacientes);
             this.Name = "FrmPaciente";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.FrmPaciente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -173,8 +172,8 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dgvPacientes;
+        private System.Windows.Forms.TextBox txtPacientes;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Label lblPacientes;
         private System.Windows.Forms.Label lblFiltro;

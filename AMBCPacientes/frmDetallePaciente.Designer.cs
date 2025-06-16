@@ -255,6 +255,7 @@
             this.btnAceptar.TabIndex = 0;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -265,6 +266,23 @@
             this.btnCancelar.TabIndex = 1;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // 
+            this.cboCalle.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cboCalle.FormattingEnabled = true;
+            this.cboCalle.Location = new System.Drawing.Point(172, 208);
+            this.cboCalle.Name = "cboCalle";
+            this.cboCalle.Size = new System.Drawing.Size(145, 24);
+            this.cboCalle.TabIndex = 17;
+            // 
+            // 
+            this.cboCalle.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cboCalle.FormattingEnabled = true;
+            this.cboCalle.Location = new System.Drawing.Point(172, 208);
+            this.cboCalle.Name = "cboCalle";
+            this.cboCalle.Size = new System.Drawing.Size(145, 24);
+            this.cboCalle.TabIndex = 17;
             // 
             // frmDetallePaciente
             // 
@@ -278,6 +296,7 @@
             this.MinimizeBox = false;
             this.Name = "frmDetallePaciente";
             this.Text = "frmDetallePaciente";
+            this.Load += new System.EventHandler(this.frmDetallePaciente_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);

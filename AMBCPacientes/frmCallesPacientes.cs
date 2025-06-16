@@ -16,7 +16,6 @@ namespace AMBCPacientes
         {
             InitializeComponent();
         }
-
         private void btnPacientes_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -24,7 +23,6 @@ namespace AMBCPacientes
             frm.ShowDialog();
             this.Show();
         }
-
         private void btnCalles_Click(object sender, EventArgs e)
         {
             this.Hide();

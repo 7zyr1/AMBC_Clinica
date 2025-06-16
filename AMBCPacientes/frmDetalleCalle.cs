@@ -49,6 +49,7 @@ namespace AMBCPacientes
                 AccesoDatos accesoDatos = new AccesoDatos();
                 accesoDatos.ActualizarBD(consulta, parametros);
                 MessageBox.Show("Calle actualizada correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
             else
             {

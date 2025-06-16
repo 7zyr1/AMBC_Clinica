@@ -12,3 +12,17 @@ C:\Users\Valentino\dev\source\repos\AMBCPacientes\AMBCPacientes\obj\Debug\AMBCPa
 C:\Users\Valentino\dev\source\repos\AMBCPacientes\AMBCPacientes\obj\Debug\AMBCPacientes.frmCallesPacientes.resources
 C:\Users\Valentino\dev\source\repos\AMBCPacientes\AMBCPacientes\obj\Debug\AMBCPacientes.frmDetallePaciente.resources
 C:\Users\Valentino\dev\source\repos\AMBCPacientes\AMBCPacientes\obj\Debug\AMBCPacientes.frmDetalleCalle.resources
+C:\Users\AORUS\Source\Repos\AMBC_Clinica\AMBCPacientes\bin\Debug\AMBCPacientes.exe.config
+C:\Users\AORUS\Source\Repos\AMBC_Clinica\AMBCPacientes\bin\Debug\AMBCPacientes.exe
+C:\Users\AORUS\Source\Repos\AMBC_Clinica\AMBCPacientes\bin\Debug\AMBCPacientes.pdb
+C:\Users\AORUS\Source\Repos\AMBC_Clinica\AMBCPacientes\obj\Debug\AMBCPacientes.csproj.AssemblyReference.cache
+C:\Users\AORUS\Source\Repos\AMBC_Clinica\AMBCPacientes\obj\Debug\AMBCPacientes.frmCallesPacientes.resources
+C:\Users\AORUS\Source\Repos\AMBC_Clinica\AMBCPacientes\obj\Debug\AMBCPacientes.frmCalles.resources
+C:\Users\AORUS\Source\Repos\AMBC_Clinica\AMBCPacientes\obj\Debug\AMBCPacientes.frmDetalleCalle.resources
+C:\Users\AORUS\Source\Repos\AMBC_Clinica\AMBCPacientes\obj\Debug\AMBCPacientes.frmDetallePaciente.resources
+C:\Users\AORUS\Source\Repos\AMBC_Clinica\AMBCPacientes\obj\Debug\AMBCPacientes.FrmPaciente.resources
+C:\Users\AORUS\Source\Repos\AMBC_Clinica\AMBCPacientes\obj\Debug\AMBCPacientes.Properties.Resources.resources
+C:\Users\AORUS\Source\Repos\AMBC_Clinica\AMBCPacientes\obj\Debug\AMBCPacientes.csproj.GenerateResource.cache
+C:\Users\AORUS\Source\Repos\AMBC_Clinica\AMBCPacientes\obj\Debug\AMBCPacientes.csproj.CoreCompileInputs.cache
+C:\Users\AORUS\Source\Repos\AMBC_Clinica\AMBCPacientes\obj\Debug\AMBCPacientes.exe
+C:\Users\AORUS\Source\Repos\AMBC_Clinica\AMBCPacientes\obj\Debug\AMBCPacientes.pdb

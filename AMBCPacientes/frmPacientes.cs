@@ -31,5 +31,10 @@ namespace AMBCPacientes
                 this.Close();
             }
         }
+
+        private void FrmPaciente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,7 +30,9 @@ namespace AMBCPacientes
                 int edad = Convert.ToInt32(accesoDatos.pReader["edad"]);
                 Calle calle = new Calle(Convert.ToInt32(accesoDatos.pReader["id_calle"]), accesoDatos.pReader["c_nombre"].ToString());
                 int numeracion = Convert.ToInt32(accesoDatos.pReader["numeracion"]);
-                string telefono = accesoDatos.pReader["telefono"].ToString(); //por alguna extraña razon este campo es un varchar en un lugar de un int, supongo que por el uso de guiones 
+                string telefono = accesoDatos.pReader["telefono"].ToString(); //por alguna extraña razon este campo es un varchar en un lugar de un int,
+                                                                              //supongo que por el uso de guiones, de todas formas voy a poner que se pueda escribir solo numeros
+                                                                              //no lo cmabio para no cambiar la estructura 
                 Paciente paciente = new Paciente(id, nombre, apellido, dni, edad, calle, numeracion, telefono);
                 pacientes.Add(paciente);
             }

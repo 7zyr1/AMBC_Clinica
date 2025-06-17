@@ -89,11 +89,11 @@ namespace AMBCPacientes
                         accesoDatos.ActualizarBD(query, parametros);
                         MessageBox.Show("Calle eliminada correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         btnConsultar.PerformClick();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Debes seleccionar una calle para Borrar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    }  
+                }
+                else
+                {
+                    MessageBox.Show("Debes seleccionar una calle para Borrar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (System.Data.SqlClient.SqlException ex)

@@ -161,6 +161,9 @@
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.txtCalle);
             this.Controls.Add(this.dgvCalles);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCalles";
             this.Text = "ABMC Calles";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCalles)).EndInit();

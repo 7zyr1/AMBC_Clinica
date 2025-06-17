@@ -268,6 +268,22 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // 
+            this.cboCalle.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cboCalle.FormattingEnabled = true;
+            this.cboCalle.Location = new System.Drawing.Point(172, 208);
+            this.cboCalle.Name = "cboCalle";
+            this.cboCalle.Size = new System.Drawing.Size(145, 24);
+            this.cboCalle.TabIndex = 17;
+            // 
+            // 
+            this.cboCalle.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cboCalle.FormattingEnabled = true;
+            this.cboCalle.Location = new System.Drawing.Point(172, 208);
+            this.cboCalle.Name = "cboCalle";
+            this.cboCalle.Size = new System.Drawing.Size(145, 24);
+            this.cboCalle.TabIndex = 17;
+            // 
             // frmDetallePaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -275,6 +291,9 @@
             this.ClientSize = new System.Drawing.Size(364, 394);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmDetallePaciente";
             this.Text = "frmDetallePaciente";
             this.Load += new System.EventHandler(this.frmDetallePaciente_Load);

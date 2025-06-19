@@ -58,7 +58,9 @@ namespace AMBCPacientes
             frmCalles frmCalles = new frmCalles();
             List<Calle> lista = frmCalles.TraerCalles(consulta);
             cboCalle.DropDownStyle = ComboBoxStyle.DropDownList;
-            cboCalle.DataSource = lista;
+            var listaCombo = lista.ToList();
+            listaCombo.Add(new Calle(lista.Count, "Otro")); 
+            cboCalle.DataSource = listaCombo;
             cboCalle.DisplayMember = "nombre";
             cboCalle.ValueMember = "id_calle";
         }
@@ -144,9 +146,16 @@ namespace AMBCPacientes
                 parametros.Add(numeracion);
                 Parametro telefono = new Parametro("@telefono", txtTelefono.Text);
                 parametros.Add(telefono);
-                txtCodigo.Text = accesoDatos.ActualizarBD(consulta, parametros).ToString();
-                MessageBox.Show("Paciente agregado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                clear();
+                try
+                {
+                    txtCodigo.Text = accesoDatos.ActualizarBD(consulta, parametros).ToString();
+                    MessageBox.Show("Paciente agregado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clear();
+                }
+                catch (System.Data.SqlClient.SqlException ex)
+                {
+                    MessageBox.Show($"Error inesperado: {ex}");
+                }
             }
         }   
         private void SoloNumeros_KeyPress(object sender, KeyPressEventArgs e)
@@ -155,6 +164,28 @@ namespace AMBCPacientes
             {
             e.Handled = true;
             }
-        }   
+        }
+
+        private void cboCalle_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboCalle.Text != null && cboCalle.SelectedIndex != -1)
+            {
+                if (cboCalle.Text == "Otro")
+                {
+                    DialogResult result = MessageBox.Show($"Usted Selecciono {cboCalle.Text}\n¿Desea ingresar una calle?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        frmDetalleCalle frmDetalleCalle = new frmDetalleCalle();
+                        frmDetalleCalle.ShowDialog();
+                        CargarCombo();
+                        cboCalle.SelectedIndex = -1;
+                    }
+                    else
+                    {
+                        cboCalle.SelectedIndex = -1;
+                    }
+                }
+            }
+        }
     }
 }

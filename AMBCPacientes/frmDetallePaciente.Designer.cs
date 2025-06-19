@@ -231,6 +231,7 @@
             this.cboCalle.Name = "cboCalle";
             this.cboCalle.Size = new System.Drawing.Size(145, 24);
             this.cboCalle.TabIndex = 17;
+            this.cboCalle.SelectedIndexChanged += new System.EventHandler(this.cboCalle_SelectedIndexChanged);
             // 
             // tableLayoutPanel2
             // 
@@ -267,22 +268,6 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // 
-            this.cboCalle.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cboCalle.FormattingEnabled = true;
-            this.cboCalle.Location = new System.Drawing.Point(172, 208);
-            this.cboCalle.Name = "cboCalle";
-            this.cboCalle.Size = new System.Drawing.Size(145, 24);
-            this.cboCalle.TabIndex = 17;
-            // 
-            // 
-            this.cboCalle.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cboCalle.FormattingEnabled = true;
-            this.cboCalle.Location = new System.Drawing.Point(172, 208);
-            this.cboCalle.Name = "cboCalle";
-            this.cboCalle.Size = new System.Drawing.Size(145, 24);
-            this.cboCalle.TabIndex = 17;
             // 
             // frmDetallePaciente
             // 

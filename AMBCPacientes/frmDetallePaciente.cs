@@ -22,6 +22,7 @@ namespace AMBCPacientes
             InitializeComponent();
             CargarDatos(paciente);
             estaEditando = true;
+            btnAceptar.Enabled= true;
         }
         public void CargarDatos(Paciente paciente)
         {
@@ -66,7 +67,6 @@ namespace AMBCPacientes
         }
         private void frmDetallePaciente_Load(object sender, EventArgs e)
         {
-            btnAceptar.Enabled = false;
             txtCodigo.Enabled = false;
             txtNombre.TextChanged += validarCampos;
             txtApellido.TextChanged += validarCampos;
@@ -82,6 +82,7 @@ namespace AMBCPacientes
             CargarCombo();
             if (!estaEditando)
             {
+                btnAceptar.Enabled = false;
                 cboCalle.SelectedIndex = -1;
                 AccesoDatos accesoDatos = new AccesoDatos();
                 txtCodigo.Text = accesoDatos.GetMaxId("id_paciente", "pacientes").ToString();
@@ -96,8 +97,8 @@ namespace AMBCPacientes
             bool edadValidado = !string.IsNullOrWhiteSpace(txtEdad.Text);
             bool calleValidado = !string.IsNullOrWhiteSpace(cboCalle.Text);
             bool numeracionValidado = !string.IsNullOrWhiteSpace(txtNumeracion.Text);
-            bool telefonoValidado = !string.IsNullOrWhiteSpace(txtTelefono.Text);
-            btnAceptar.Enabled = codigoValidado && nombreValidado && apellidoValidado && dniValidado && edadValidado && calleValidado && numeracionValidado && telefonoValidado;
+            //bool telefonoValidado = !string.IsNullOrWhiteSpace(txtTelefono.Text);
+            btnAceptar.Enabled = codigoValidado && nombreValidado && apellidoValidado && dniValidado && edadValidado && calleValidado && numeracionValidado; //&& telefonoValidado;
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)

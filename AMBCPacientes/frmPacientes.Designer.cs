@@ -161,8 +161,11 @@
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.txtPacientes);
             this.Controls.Add(this.dgvPacientes);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmPaciente";
-            this.Text = "Form1";
+            this.Text = "ABMC Pacientes";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

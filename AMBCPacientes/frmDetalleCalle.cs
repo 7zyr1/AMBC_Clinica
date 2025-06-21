@@ -22,6 +22,7 @@ namespace AMBCPacientes
             InitializeComponent();
             CargarDatos(Calle);
             estaEditando = true;
+            btnAceptar.Enabled = true;
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -70,13 +71,13 @@ namespace AMBCPacientes
         private void frmDetalleCalle_Load(object sender, EventArgs e)
         {
             txtCodigo.Enabled = false;
-            btnAceptar.Enabled = false;
             txtCodigo.TextChanged += validarCampos;
             txtNombreCalle.TextChanged += validarCampos;
             if (!estaEditando)
             {
                 AccesoDatos accesoDatos = new AccesoDatos();
                 txtCodigo.Text = accesoDatos.GetMaxId("id_calle", "calles").ToString();
+                btnAceptar.Enabled = false;
             }
         }
         public void validarCampos(object sender, EventArgs e) 

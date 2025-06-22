@@ -28,12 +28,13 @@ namespace AMBCPacientes
         {
             if (paciente != null)
             {
+                CargarCombo();
                 txtCodigo.Text = paciente.id.ToString();
                 txtNombre.Text = paciente.nombre;
                 txtApellido.Text = paciente.apellido;
                 txtDni.Text = paciente.dni.ToString();
                 txtEdad.Text = paciente.edad.ToString();
-                cboCalle.SelectedValue = paciente.calle.id_calle;
+                cboCalle.SelectedValue = Convert.ToInt32(paciente.calle.id_calle);
                 txtNumeracion.Text = paciente.numeracion.ToString();
                 txtTelefono.Text = paciente.telefono.ToString();
                 validarCampos(this, EventArgs.Empty);
@@ -79,9 +80,9 @@ namespace AMBCPacientes
             txtEdad.KeyPress += SoloNumeros_KeyPress;
             txtNumeracion.KeyPress += SoloNumeros_KeyPress;
             txtTelefono.KeyPress += SoloNumeros_KeyPress;
-            CargarCombo();
             if (!estaEditando)
             {
+                CargarCombo();
                 btnAceptar.Enabled = false;
                 cboCalle.SelectedIndex = -1;
                 AccesoDatos accesoDatos = new AccesoDatos();

@@ -126,7 +126,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmDetalleCalle";
-            this.Text = "frmDetalleCalle";
+            this.Text = "Detalle Calle";
             this.Load += new System.EventHandler(this.frmDetalleCalle_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

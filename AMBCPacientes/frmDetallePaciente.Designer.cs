@@ -280,7 +280,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmDetallePaciente";
-            this.Text = "frmDetallePaciente";
+            this.Text = "Detalle Paciente";
             this.Load += new System.EventHandler(this.frmDetallePaciente_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

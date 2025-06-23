@@ -1,0 +1,356 @@
+CREATE DATABASE CLINICA_db_CORRECCION
+USE CLINICA_db_CORRECCION
+CREATE TABLE CENTROS_DE_ATENCION (
+    id_centro INT IDENTITY(1,1),
+	nombre varchar(MAX),
+	CONSTRAINT Pk_centros PRIMARY KEY(id_centro)
+)
+
+CREATE TABLE CALLES(
+	id_calle int identity(1,1),
+	nombre varchar(MAX),
+	constraint Pk_calle primary key(id_calle)
+)
+CREATE TABLE OBRA_SOCIAL (
+    id_obra_social INT IDENTITY(1,1),
+    nombre VARCHAR(50) NOT NULL,
+    monto_coseguro DECIMAL(10,2),
+    porcentaje_cobertura DECIMAL(5,2),
+    consultas_mensuales INT
+	CONSTRAINT Pk_obra_social PRIMARY KEY(id_obra_social)
+)
+
+CREATE TABLE ESPECIALIDADES (
+    id_especialidad INT IDENTITY(1,1),
+    nombre VARCHAR(50) NOT NULL
+	CONSTRAINT Pk_especialidad PRIMARY KEY(id_especialidad)
+)
+
+CREATE TABLE OBRAS_SOCIALES_ESPECIALIDADES (
+	id_obra_social_especialidad int identity(1,1),
+    id_obra_social INT,
+    id_especialidad INT,
+    CONSTRAINT Pk_obra_especialidad PRIMARY KEY(id_obra_social_especialidad),
+    CONSTRAINT Fk_obra_social_E FOREIGN KEY(id_obra_social) REFERENCES OBRA_SOCIAL(id_obra_social),
+    CONSTRAINT Fk_especialidad_O FOREIGN KEY(id_especialidad) REFERENCES ESPECIALIDADES(id_especialidad)
+)
+
+CREATE TABLE PACIENTES (
+    id_paciente INT IDENTITY(1,1),
+    nombre VARCHAR(50),
+    apellido VARCHAR(50),
+    dni INT UNIQUE,
+    edad INT,
+	id_calle int,
+	numeracion int,
+    telefono VARCHAR(20)
+	CONSTRAINT Pk_pacientes PRIMARY KEY(id_paciente)
+	constraint Fk_calle_p foreign key(id_calle) references CALLES(id_calle)
+)
+
+CREATE TABLE PACIENTES_OBRA_SOCIAL (
+    id_paciente_obra_social int identity(1,1),
+	id_paciente INT,
+    id_obra_social INT,
+    CONSTRAINT Pk_pacientes_obra PRIMARY KEY(id_paciente_obra_social),
+    CONSTRAINT Fk_paciente_O FOREIGN KEY(id_paciente) REFERENCES PACIENTES(id_paciente),
+    CONSTRAINT Fk_obra_social_POB FOREIGN KEY(id_obra_social) REFERENCES OBRA_SOCIAL(id_obra_social)
+)
+
+CREATE TABLE ALERGIAS (
+    id_alergia INT IDENTITY(1,1),
+    nombre VARCHAR(50)
+	CONSTRAINT Pk_alergias PRIMARY KEY(id_alergia)
+)
+
+CREATE TABLE ENFERMEDADES (
+    id_enfermedad INT IDENTITY(1,1),
+    nombre VARCHAR(50)
+	CONSTRAINT Pk_enfermedades PRIMARY KEY(id_enfermedad)
+)
+
+CREATE TABLE HISTORIA_CLINICA (
+    id_historia INT IDENTITY(1,1),
+    id_paciente INT UNIQUE,
+    fecha_alta DATE NOT NULL,
+    peso INT,
+    talla INT,
+    estado_general VARCHAR(100),
+	CONSTRAINT Pk_historia_clinica PRIMARY KEY(id_historia),
+    CONSTRAINT Fk_paciente_h FOREIGN KEY(id_paciente) REFERENCES PACIENTES(id_paciente)
+)
+
+CREATE TABLE HISTORIA_ENFERMEDADES (
+	id_enfermedad_historia int identity(1,1),
+    id_enfermedad INT,
+    id_historia INT,
+    CONSTRAINT Pk_historia_enfermedades PRIMARY KEY(id_enfermedad_historia),
+    CONSTRAINT Fk_historia_E FOREIGN KEY(id_historia) REFERENCES HISTORIA_CLINICA(id_historia),
+    CONSTRAINT Fk_enfermedad_h FOREIGN KEY(id_enfermedad) REFERENCES ENFERMEDADES(id_enfermedad)
+)
+
+CREATE TABLE HISTORIA_ALERGIAS (
+    id_historia_alergia int identity(1,1),
+	id_alergia INT,
+    id_historia INT,
+    CONSTRAINT Pk_historia_alergias PRIMARY KEY(id_historia_alergia),
+    CONSTRAINT Fk_historia_A FOREIGN KEY(id_historia) REFERENCES HISTORIA_CLINICA(id_historia),
+    CONSTRAINT Fk_alergia_H FOREIGN KEY(id_alergia) REFERENCES ALERGIAS(id_alergia)
+)
+
+CREATE TABLE MEDICOS (
+    id_medico INT IDENTITY(1,1),
+    nombre VARCHAR(50),
+    apellido VARCHAR(50),
+	id_calle int,
+	numeracion int,
+	CONSTRAINT Pk_medicos PRIMARY KEY(id_medico),
+	constraint Fk_calle foreign key(id_calle) references CALLES(id_calle)
+)
+
+CREATE TABLE MEDICOS_ESPECIALIDAD (
+    id_medico_esp int identity(1,1),
+	id_medico INT,
+    id_especialidad INT,
+    CONSTRAINT Pk_medico_especialidad PRIMARY KEY(id_medico_esp),
+    CONSTRAINT Fk_medico_E FOREIGN KEY(id_medico) REFERENCES MEDICOS(id_medico),
+    CONSTRAINT Fk_especialidad_M FOREIGN KEY(id_especialidad) REFERENCES ESPECIALIDADES(id_especialidad)
+)
+
+
+CREATE TABLE METODO_DE_PAGO (
+    id_metodo INT IDENTITY(1,1),
+    nombre VARCHAR(50)
+	CONSTRAINT Fk_metodo_pago PRIMARY KEY(id_metodo)
+)
+
+CREATE TABLE PAGO (
+    id_pago INT IDENTITY(1,1),
+    monto DECIMAL(10,2),
+    id_metodo INT,
+    id_obra_social INT,
+	CONSTRAINT Pk_pago PRIMARY KEY(id_pago),
+    CONSTRAINT Fk_metodo_P FOREIGN KEY(id_metodo) REFERENCES METODO_DE_PAGO(id_metodo),
+    CONSTRAINT Fk_obra_social_P FOREIGN KEY(id_obra_social) REFERENCES OBRA_SOCIAL(id_obra_social)
+)
+
+CREATE TABLE DIAGNOSTICOS (
+	id_diagnostico INT IDENTITY(1,1),
+	fecha_hora datetime,
+	descripcion varchar(MAX),
+	CONSTRAINT Pk_diagnostico PRIMARY KEY (id_diagnostico),
+)
+CREATE TABLE TIPO_ESTUDIOS(
+	id_tipo_estudio int identity(1,1),
+	nombre varchar(MAX)
+	constraint Pk_tipo_estudio primary key(id_tipo_estudio)
+)
+
+CREATE TABLE CONSULTAS (
+    id_consulta INT IDENTITY(1,1),
+    id_paciente INT,
+    id_medico INT NULL,
+    id_obra_social INT,
+    fecha DATETIME,
+    id_centro INT,
+	CONSTRAINT Pk_constultas PRIMARY KEY(id_consulta),
+    CONSTRAINT Fk_paciente_C FOREIGN KEY(id_paciente) REFERENCES PACIENTES(id_paciente),
+    CONSTRAINT Fk_medico_C FOREIGN KEY(id_medico) REFERENCES MEDICOS(id_medico),
+    CONSTRAINT Fk_obra_social_C FOREIGN KEY(id_obra_social) REFERENCES OBRA_SOCIAL(id_obra_social),
+    CONSTRAINT Fk_centro_C FOREIGN KEY(id_centro) REFERENCES CENTROS_DE_ATENCION(id_centro)
+)
+
+CREATE TABLE ESTUDIOS (
+    id_estudio INT IDENTITY(1,1),
+	id_consulta int,
+    id_tipo_estudio int,
+    fecha_solicitud DATE,
+    fecha_resultado DATE NULL,
+    resultado TEXT,
+    id_diagnostico int,
+	CONSTRAINT Pk_estudio PRIMARY KEY(id_estudio),
+	CONSTRAINT Fk_consulta_e FOREIGN KEY(id_consulta) references CONSULTAS(id_consulta),
+	CONSTRAINT Fk_tipo foreign key(id_tipo_estudio) references TIPO_ESTUDIOS(id_tipo_estudio),
+	CONSTRAINT FK_diagnostico_e FOREIGN KEY(id_diagnostico) REFERENCES DIAGNOSTICOS(id_diagnostico)
+)
+
+CREATE TABLE CONSULTA_PAGO (
+    id_consulta_pago int identity(1,1),
+	id_consulta INT,
+    id_pago INT,
+    CONSTRAINT Pk_constulta_pago PRIMARY KEY(id_consulta_pago),
+    CONSTRAINT Fk_consulta_CP FOREIGN KEY(id_consulta) REFERENCES CONSULTAS(id_consulta),
+    CONSTRAINT Fk_pago_CP FOREIGN KEY(id_pago) REFERENCES PAGO(id_pago)
+)
+
+
+CREATE TABLE DETALLE_HISTORIA (
+    id_detalle INT IDENTITY(1,1),
+    id_historia INT,
+    fecha DATE,
+    estado VARCHAR(100),
+    id_diagnostico int,
+    CONSTRAINT Pk_detalle_historia PRIMARY KEY(id_detalle),
+	CONSTRAINT Fk_historia_hd FOREIGN KEY(id_historia) REFERENCES HISTORIA_CLINICA(id_historia),
+	CONSTRAINT Fk_diagnostico_hd FOREIGN KEY(id_diagnostico) REFERENCES DIAGNOSTICOS(id_diagnostico)
+)
+
+-- CALLES
+INSERT INTO CALLES (nombre) VALUES 
+('Av. Rivadavia'), ('Calle San Martín'), ('Av. Corrientes'),
+('Calle Belgrano'), ('Calle Lavalle'), ('Calle Mitre'),
+('Av. Santa Fe'), ('Av. Juan B. Justo'), ('Calle Defensa'), ('Calle Perú'),
+('Calle Moreno'), ('Av. Belgrano'), ('Calle Suipacha'), ('Calle Esmeralda'),
+('Av. Independencia'), ('Av. Córdoba'), ('Calle Tacuarí');
+
+-- CENTROS
+INSERT INTO CENTROS_DE_ATENCION (nombre) VALUES 
+('Hospital Central'), ('Clínica del Oeste'), ('Sanatorio Norte'),
+('Centro Médico Sur'), ('Unidad Médica Palermo'), ('Hospital del Sur'), ('Policlínico Norte'), ('Centro Médico Belgrano'),
+('Clínica Nueva Esperanza'), ('Hospital de Clínicas'), ('Centro Médico del Este');
+
+-- OBRAS SOCIALES
+INSERT INTO OBRA_SOCIAL (nombre, monto_coseguro, porcentaje_cobertura, consultas_mensuales) VALUES
+('OSDE', 700.00, 90.00, 12), ('Swiss Medical', 600.00, 85.00, 10),
+('Galeno', 500.00, 80.00, 8), ('Medifé', 550.00, 82.00, 9),
+('IOMA', 300.00, 70.00, 5), ('PAMI', 0.00, 100.00, 15),
+('Sancor Salud', 400.00, 75.00, 6), ('Accord Salud', 450.00, 78.00, 7),
+('Jerárquicos Salud', 480.00, 79.00, 8), ('Federada Salud', 460.00, 77.00, 6),
+('Unión Personal', 350.00, 74.00, 6), ('Provincia ART', 0.00, 100.00, 10),
+('Docthos', 520.00, 81.00, 7), ('OSPIP', 300.00, 76.00, 5),
+('OSPE', 370.00, 79.00, 8), ('OMINT', 580.00, 83.00, 9);
+
+-- ESPECIALIDADES
+INSERT INTO ESPECIALIDADES (nombre) VALUES 
+('Cardiología'), ('Pediatría'), ('Dermatología'), ('Traumatología'),
+('Ginecología'), ('Clínica Médica'), ('Neurología'), ('Urología'),
+('Oftalmología'), ('Gastroenterología'), ('Reumatología'), ('Endocrinología'), ('Infectología'), ('Oncología'),
+('Neumonología'), ('Hematología');
+
+-- OBRAS_SOCIALES_ESPECIALIDADES
+INSERT INTO OBRAS_SOCIALES_ESPECIALIDADES (id_obra_social, id_especialidad) VALUES
+(1,1),(2,2),(3,3),(4,4),(5,5),(6,6),(7,7),(8,8),(9,9),(10,10), (1,6),(2,7),(3,8),(4,9),(5,10),(6,1),(7,2);
+
+-- PACIENTES
+INSERT INTO PACIENTES (nombre, apellido, dni, edad, id_calle, numeracion, telefono) VALUES
+('María','González',32123456,28,1,1234,'11-1234-5678'),
+('Carlos','Pérez',30111222,45,2,221, null),
+('Lucía','Fernández',33445566,32,3,789,'11-5678-1234'),
+('Jorge','Lopez',28999555,54,4,456,null),
+('Ana','Martínez',27888999,38,5,101,'11-6789-0123'), 
+('Fernando','Alvarez',27822111,40,6,876,'11-3211-5678'),
+('Julieta','Méndez',29554233,29,7,912,'11-5555-6789'),
+('Raúl','Torres',30555666,61,8,1540,null),
+('Laura','Ramos',31222333,35,9,33,'11-3344-7788'),
+('Martín','Ibarra',32666555,48,10,345,null);
+
+-- PACIENTES_OBRA_SOCIAL
+INSERT INTO PACIENTES_OBRA_SOCIAL (id_paciente, id_obra_social) VALUES
+(1,null),(2,2),(3,3),(4,4),(5,5),(1,2),(5,3),
+(6,6),(7,null),(8,8),(9,9),(10,null),(6,1),(8,3);
+
+-- ALERGIAS
+INSERT INTO ALERGIAS (nombre) VALUES 
+('Penicilina'), ('Polen'), ('Ácaros'), ('Mariscos'), ('Látex'),
+('Frutos secos'), ('Picaduras de insectos'), ('Cloro'), ('Aspirina'), ('Polvo doméstico');
+
+-- ENFERMEDADES
+INSERT INTO ENFERMEDADES (nombre) VALUES 
+('Hipertensión'), ('Diabetes'), ('Asma'), ('Artritis'), ('Migraña'),
+('Colesterol alto'), ('EPOC'), ('Hipotiroidismo'), ('Anemia'), ('Gastritis');
+
+-- HISTORIA CLÍNICA
+INSERT INTO HISTORIA_CLINICA (id_paciente, fecha_alta, peso, talla, estado_general) VALUES
+(1,'2023-01-10',60,160,'Buena'),
+(2,'2023-02-12',85,175,'Hipertensión controlada'),
+(3,'2023-03-15',68,162,'Alergia leve'),
+(4,'2023-04-20',90,180,'Dolor lumbar'),
+(5,'2023-05-25',55,155,'En buen estado'),
+(6,'2023-06-01',75,172,'Estable'),
+(7,'2023-07-05',62,158,'Asintomática'),
+(8,'2023-08-10',88,180,'Con tratamiento'),
+(9,'2023-09-15',70,165,'Normal'),
+(10,'2023-10-20',78,174,'Observación');
+
+-- HISTORIA_ENFERMEDADES
+INSERT INTO HISTORIA_ENFERMEDADES (id_enfermedad, id_historia) VALUES 
+(1,2),(2,2),(3,3),(4,4),(5,5),
+(1,6),(null,7),(null,8),(4,9),(5,10),(null,6),(8,10);
+
+-- HISTORIA_ALERGIAS
+INSERT INTO HISTORIA_ALERGIAS (id_alergia, id_historia) VALUES 
+(1,1),(2,3),(null,3),(4,4),(5,5),
+(null,6),(2,7),(3,8),(null,9),(null,10),(6,7),(8,9);
+
+-- MÉDICOS
+INSERT INTO MEDICOS (nombre, apellido, id_calle, numeracion) VALUES
+('Javier','Martínez',6,101),('Laura','Rodríguez',7,202),
+('Pedro','Gomez',8,303),('Luciana','Sosa',9,404),('Andrés','Vega',10,505),
+('Ernesto','Díaz',1,101),('Marcela','Gutiérrez',2,202),
+('Rodrigo','Romero',3,303),('Cecilia','Acosta',4,404),('Ignacio','Benítez',5,505);
+
+-- MÉDICOS_ESPECIALIDAD
+INSERT INTO MEDICOS_ESPECIALIDAD (id_medico, id_especialidad) VALUES
+(1,2),(2,2),(3,3),(4,7),(5,5),(6,6),(7,7),(8,10),(9,9),(10,10);
+
+-- MÉTODOS DE PAGO
+INSERT INTO METODO_DE_PAGO (nombre) VALUES 
+('Efectivo'), ('Tarjeta de Crédito'), ('Transferencia'), ('Débito');
+
+-- PAGO
+INSERT INTO PAGO (monto, id_metodo, id_obra_social) VALUES
+(1000,1,1), (1500,2,2), (1200,3,3), (900,1,4), (800,2,5),
+(950,4,6), (1100,2,7), (1050,4,8), (1200,2,9), (1150,1,10);
+
+-- DIAGNÓSTICOS
+INSERT INTO DIAGNOSTICOS (fecha_hora, descripcion) VALUES
+('2016-08-14 10:35:00','Hipertensión leve controlada'),
+('2018-04-23 09:15:00','Alergia estacional'),
+('2020-11-06 14:45:00','Dolor lumbar crónico'),
+('2023-03-10 11:20:00','Consulta preventiva'),
+('2025-01-27 08:50:00','Chequeo general');
+
+-- TIPO_ESTUDIOS
+INSERT INTO TIPO_ESTUDIOS (nombre) VALUES 
+('Laboratorio'), ('Resonancia'), ('Radiografía'), ('Electrocardiograma'), ('Ecografía'), ('Tomografía'),
+('Endoscopia'),('Biopsia'),('Mamografía'),('Densitometría Ósea');
+
+-- CONSULTAS
+INSERT INTO CONSULTAS (id_paciente, id_medico, id_obra_social, fecha, id_centro) VALUES
+(1,1,1,'2016-08-14 10:40:00',1),
+(1,3,1,'2019-06-18 11:30:00',1),
+(2,2,2,'2018-04-23 09:20:00',2),
+(2,1,2,'2018-11-04 09:15:00',2),
+(3,3,3,'2020-11-06 14:50:00',3),
+(4,4,4,'2023-03-10 11:25:00',4),
+(5,5,5,'2025-01-27 08:55:00',5),
+(6,1,6,'2023-06-10 09:00:00',1),
+(7,2,7,'2023-07-15 10:30:00',2),
+(8,3,8,'2023-08-20 11:45:00',3),
+(9,4,9,'2023-09-25 13:00:00',4),
+(10,5,10,'2023-10-30 14:15:00',5);
+
+-- CONSULTA_PAGO
+INSERT INTO CONSULTA_PAGO (id_consulta, id_pago) VALUES 
+(1,1),(2,2),(3,3),(4,4),(5,5),(5,3),(9,9),(7,10),(8,NULL),(6,NULL),(10,NULL);
+
+-- ESTUDIOS
+INSERT INTO ESTUDIOS (id_consulta, id_tipo_estudio, fecha_solicitud, fecha_resultado, resultado, id_diagnostico) VALUES
+(1,1,'2016-08-14 10:45:00','2016-08-15 12:00:00','Todo normal',1),
+(2,2,'2018-04-23 09:25:00','2018-04-24 10:00:00','Alergia confirmada',2),
+(3,3,'2020-11-06 14:55:00','2020-11-07 16:30:00','Desgaste lumbar',3),
+(4,4,'2023-03-10 11:30:00','2023-03-11 13:00:00','Sin hallazgos',4),
+(5,5,'2025-01-27 09:00:00','2025-01-28 10:45:00','Todo bien',5);
+
+-- DETALLE_HISTORIA
+INSERT INTO DETALLE_HISTORIA (id_historia, fecha, estado, id_diagnostico) VALUES
+(1,'2016-08-14 11:00:00','Estable',1),
+(2,'2018-04-23 09:45:00','Controlado',2),
+(3,'2020-11-06 15:00:00','En tratamiento',3),
+(4,'2023-03-10 11:40:00','Mejorando',4),
+(5,'2025-01-27 09:10:00','Sin cambios',5),
+(6,'2023-06-11 10:00:00','Estable',1),
+(7,'2023-07-16 11:00:00','Sin novedades',2),
+(8,'2023-08-21 12:00:00','Requiere seguimiento',3),
+(9,'2023-09-26 13:00:00','Controlado',4),
+(10,'2023-10-31 14:00:00','Óptimo',5);

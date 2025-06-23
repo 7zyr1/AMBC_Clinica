@@ -12,7 +12,7 @@ namespace AMBCPacientes
     internal class AccesoDatos
     {
         //aca lo conecte localmente, conectenlo con el suyo
-        private string CadenaConexion = "Data Source=LAPTOP-7KUNN01M\\SQLEXPRESS;Initial Catalog=CLINICA_db_CORRECCION;Integrated Security=True;";
+        private string CadenaConexion = "Data Source=DESKTOP-HGTSJIB;Initial Catalog=HistoriaClinica;Integrated Security=True";
         private SqlConnection conexion;
         private SqlCommand comando;
         private SqlDataReader reader;

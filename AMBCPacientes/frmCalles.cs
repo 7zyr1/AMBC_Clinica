@@ -127,5 +127,10 @@ namespace AMBCPacientes
                 MessageBox.Show("Debes seleccionar una calle para Editar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void frmCalles_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

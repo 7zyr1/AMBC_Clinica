@@ -166,6 +166,7 @@
             this.MinimizeBox = false;
             this.Name = "frmCalles";
             this.Text = "ABMC Calles";
+            this.Load += new System.EventHandler(this.frmCalles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCalles)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
